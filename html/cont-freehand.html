@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <!--A button to open the popup form-->
+    <button class="open-button" onclick="openForm()">
+     Open Form
+    </button>  
+     
+    <!-- The form-->
+    <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+    
+    <h1>Login</h1>
+
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name ="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <p>
+      Payment Method: <span  onclick="alert ('ERROR')"
+      ><a href="">Gift card</a>,</span> <span><a href="" onclick="alert ('ERROR')">Debit card</a>,</span> <span><a href="" onclick="alert ('ERROR')">Paypal</a></span>
+    </p>
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+
+    <script>
+       function openForm(){
+        document.getElementById("myForm") .style .display = 'block';
+       }
+
+       function closeForm() {
+        document.getElementById("myForm") .style .display = "none";
+       }
+    </script>
+  </body>
+</html>

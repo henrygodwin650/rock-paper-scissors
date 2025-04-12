@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <style>
+      .clear{
+       background-color: white;
+       border: solid;
+       border-color: red blue blue red;
+       color: brown;
+       border-radius: 10px;
+      }
+
+      .button-1{
+        background-color: red;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 25px;
+        margin-left: 3px;
+      }
+      
+      .button-2{
+        background-color: blue;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 25px;
+        margin-left: 3px;
+      }
+      
+      .button-3{
+        background-color: green;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 25px;
+        margin-left: 3px;
+      } 
+      .button-4{
+        background-color: yellow;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 25px;
+        margin-left: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <button class="button-1" onclick="
+        calculator +='1';
+        console.log(calculator);
+        ">
+        1
+      </button>
+      <button class="button-1" onclick="
+      calculator +='2';
+      console.log(calculator);
+      ">
+        2
+      </button>
+      <button class="button-1" onclick="
+      calculator +='3';
+      console.log(calculator);
+      ">
+        3
+      </button>
+      <button class="button-1" onclick="
+      calculator +=' + ';
+      console.log(calculator);
+      ">
+        +
+      </button>
+    </p>
+
+      <p>
+        <button class="button-2" onclick="
+        calculator +='4';
+        console.log(calculator);
+        ">
+          4
+        </button>
+        <button class="button-2" onclick="
+        calculator +='5';
+        console.log(calculator);
+        ">
+          5
+        </button>
+        <button class="button-2" onclick="
+        calculator +='6';
+        console.log(calculator);
+        ">
+          6
+        </button>
+        <button class="button-2" onclick="
+        calculator +=' - ';
+        console.log(calculator);
+        ">
+          -
+        </button>
+      </p>
+
+      <p>
+        <button class="button-3" onclick="
+        calculator +='7';
+        console.log(calculator);
+        ">
+          7
+        </button>
+        <button class="button-3" onclick="
+        calculator +='8';
+        console.log(calculator);
+        ">
+          8
+        </button>
+        <button class="button-3" onclick="
+        calculator +='9';
+        console.log(calculator);
+        ">
+          9
+        </button>
+        <button class="button-3" onclick="
+        calculator +=' / ';
+        console.log(calculator);
+        ">
+          /
+        </button>
+      </p>
+
+      <p>
+        <button class="button-4" onclick="
+        calculator +='0';
+        console.log(calculator);
+        ">
+          0
+        </button>
+        <button class="button-4" onclick="
+        calculator +=' * ';
+        console.log(calculator);
+        ">
+          *
+        </button>
+        <button class="button-4" onclick="
+        calculator +=' . ';
+        console.log(calculator);
+        ">
+          .
+        </button>
+        <button class="button-4" onclick="
+        calculator=eval(calculator);
+        console.log(calculator);
+        ">
+          =
+        </button>
+      </p>
+      <button class="clear"  onclick="
+      calculator = '';
+      console.log(calculator);
+      ">
+        CLEAR
+      </button>
+
+      <script>
+        let calculator = '';
+      </script>
+  </body>
+</html>

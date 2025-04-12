@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge</title>
+  </head>
+  <body>
+  <button onclick="
+  updateScoreElement();
+    ">Show Quantity
+    </button>
+  
+  <button onclick="
+  cartQuantity ++ ;
+  updateScoreElement();
+  ">
+    Add to Cart
+  </button>
+  
+  <button onclick="
+  cartQuantity += 2;
+  updateScoreElement();
+  ">
+    +2
+  </button>
+  
+  <button onclick="
+  cartQuantity += 3;
+  updateScoreElement();
+  ">
+    +3
+  </button>
+  
+  <button onclick="
+  cartQuantity +=4;
+  updateScoreElement();
+  ">
+    +4
+  </button>
+
+  <button onclick="
+    cartQuantity +=5;
+    updateScoreElement();
+  ">
+    +5
+  </button>  
+
+  <p></p>
+
+  <button onclick="
+   cartQuantity --;
+   updateScoreElement();
+  ">
+    Remove from Cart
+  </button>
+    
+  <button onclick="
+   cartQuantity -=2;
+   updateScoreElement();
+">
+    -2
+  </button>
+  
+  <button onclick="
+  cartQuantity -=3 ;
+  updateScoreElement();
+  ">
+    -3
+  </button>
+
+  <button onclick="
+  cartQuantity = 0;
+  reset()
+  ">
+    Reset Cart
+  </button>
+
+  <p class="js-reset-cart"></p>
+  <p class="js-score"></p>
+  <script>
+   let cartQuantity = 0;
+
+function reset(){
+ document.querySelector('.js-reset-cart').innerHTML = `Cart was reset : Cart quantity ${cartQuantity}`;
+
+
+  if (cartQuantity === 10) {
+     alert ('The cart has full');
+   } else if (cartQuantity===0) {
+    alert ('Not enough items in the cart')
+   } else if (cartQuantity === -10) {
+    alert ('You are running low');
+   }
+}
+
+function updateScoreElement() {
+ let c = document.querySelector('.js-score');
+ let ct = c.value;
+ document.querySelector('.js-score').innerHTML = `Cart quantity ${cartQuantity}`;
+   
+ if (cartQuantity === 10) {
+     alert ('The cart has full');
+   } else if (cartQuantity===0) {
+    alert ('Not enough items in the cart')
+   } else if (cartQuantity === -10) {
+    alert ('You are running low');
+   }
+}
+
+  </script>
+  </body>
+</html>

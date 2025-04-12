@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      FREE HAND
+    </title>
+     <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+  
+    <img class="image-1" src="Images/-5300861255793371971_121.jpg">
+    <button class="button-1" onclick="openForm()">
+      Withdraw
+    </button>
+    <button class="button-2" onclick="openForm1()">
+      Buy Tokens
+    </button>
+     <p class="line"></p>
+     <p class="p-1">
+    <p class="paragraph-1">
+      Ongoing claims for<span class="paragraph-1b">$Major Airdrops</span> 
+    </p>
+    <p class="paragraph-2">
+       If you have participated in $Major
+      </p>
+    </p>
+
+    <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+
+      <p class="paragraph-3"><b>fill the following requirement to purchase tokens</b></p>
+
+      <input type="text" placeholder="First-name" required>
+      <input type="text" placeholder="Last-name" required>
+      <p></p>
+      <input class="input-3" type="date" required>
+      <p>Gender: 
+        Male
+        <input type="checkbox">
+        female <input type="checkbox">
+      </p>
+      <p>
+        <input type="email" placeholder="E-mail" required>
+      </p>
+      
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+    </form>
+    </div>   
+    <!--end and new line-->
+    
+    <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+    
+    <h1>Login</h1>
+
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name ="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+      <script>
+        
+       function openForm1(){
+        document.getElementById("myForm") .style .display = 'block';
+       }
+
+       function closeForm1() {
+        document.getElementById("myForm") .style .display = "none";
+       }
+       function openForm2(){
+        document.getElementById("myForm") .style .display = 'block';
+       }
+
+       function closeForm2() {
+        document.getElementById("myForm") .style .display = "none";
+       }
+      </script>
+  </body>
+</html>

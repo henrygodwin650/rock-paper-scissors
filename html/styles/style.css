@@ -1,0 +1,136 @@
+body{
+  height: 600px;
+  width: 1000px;
+  margin-left: 200px;
+  background-color: lightgray;
+}
+.image-1{
+  width: 1000px;
+  height:300px;
+}
+.paragraph-2{
+  margin-left: 255px;
+  font-size: 18px;
+  width: 500px;
+  padding-left: 125px;
+}
+.button-1{
+  background-color: rgb(49, 175, 233);
+  border: none;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.button-2{
+  background-color: green;
+  border: none;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 15px;
+  margin-left: 8px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.paragraph-3{
+border: none;
+margin-top: 50px;
+background-color: lightgoldenrodyellow;
+border-width: 1px;
+width: 343px;
+}
+.line{
+  width: 900px;
+  margin-left: 50px;
+  background-color: rgb(205, 193, 193);
+  height: 1px;
+}
+.paragraph-1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  margin-left: 342.5px;
+  margin-top: -100px;
+}
+.p-1{
+  background-color: rgb(243, 234, 234);
+  width: 500px;
+  border-radius: 50px;
+  height: 100px;
+  margin-left: 240px;
+}
+.form-container .button-1:hover , .button-2:hover {
+  opacity: 1;
+}
+.form-popup{
+  display: none;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container input[type=text], .form-container input[type=Last-name]{
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+}
+.form-container .cancel {
+  background-color: red;
+}
+/* cont freehand
+*/
+
+.open-button{
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.form-popup{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container{
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password]{
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity:  0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover , .open-button:hover {
+  opacity: 1;
+}

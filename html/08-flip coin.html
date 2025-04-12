@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+
+    <button onclick="
+    playerMove ('heads')
+     ">
+      Head
+     </button>
+  
+     <button onclick="
+     playerMove ('tails')
+     ">
+      Tail
+     </button>
+
+
+        <script>
+         function playGame(guess) {
+          const computerMove = pickcomputerMove();
+
+          let result='';
+          let guess = 'heads'
+ 
+          if (computerMove === guess) {
+            result = 'You win.';
+          } else {
+            result = 'You lose.';
+          }
+
+
+         let guess = 'tails';
+          if(computerMove === guess) { 
+            result = 'You win.'
+          } else{
+            result = 'You lose.';
+          }
+
+
+          alert (`You picked ${guess}. computer picked ${computerMove}. ${result}`)
+
+        }
+
+
+        function pickComputerMove () {
+        const randomNumber = Math.random();
+
+      let computerMove = '';
+      
+      if(randomNumber <=0.5){
+        computerMove = 'heads';
+      } else {
+        computerMove = 'tails';
+      } 
+       
+        return computerMove;
+        }
+        </script>
+  </body>
+</html>

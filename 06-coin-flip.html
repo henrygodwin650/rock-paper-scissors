@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+   <button>
+    Heads
+   </button>
+
+   <button onclick="
+  
+   ">
+    Tails
+   </button>
+    <script>
+      let randomNumber = Math.random();
+      let computerMove = '';
+      let guess = 'tails';
+      
+      if(randomNumber <=0.5){
+        computerMove = 'Heads';
+      } else {
+        computerMove = 'tails';
+      } 
+
+      let result = '';
+
+      if(computerMove === guess) {
+        result = 'You win';
+      } else {
+        result = 'You lose';
+      }
+      console.log(result);
+
+    </script>
+  </body>
+</html>

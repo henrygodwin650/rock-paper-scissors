@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+     console.log(document.querySelector('button'));
+      ">9A</button>
+
+      <button class="js-button">9B</button>
+   
+      <div>
+      <p>
+
+      <button onclick="
+       headsBridge()
+      " class="js-button-one">Heads</button>
+
+      <button class="js-button-two" onclick="
+      tailsBridge()
+      ">Tails</button>
+      <p class="js-result"></p>
+    </p>
+  </div>
+
+      <p></p>
+      <input placeholder="Name" class="js-input" onkeydown="
+      handleName1keydown(event);
+      ">
+       <button onclick="
+       inputName()
+       ">Submit</button>
+
+       <p class="js-text"></p>
+      
+      <script>
+
+function handleName1keydown(event) {
+
+if(event.key === 'Enter') {
+  inputName()
+}
+}
+
+
+function inputName() {
+const inputElement = document.querySelector('.js-input');
+let Name = inputElement.value;
+
+if(Name === inputElement) {
+  Name = 'Name' + 'inputElement';
+}
+
+document.querySelector('.js-text').innerHTML = `Your name is ${Name}`;
+}
+    
+
+      function headsBridge(){
+        let left = document.querySelector('.js-button-one');
+        let result = 'heads';
+
+      if(left === 'heads'){
+        result = 'heads';
+      } 
+
+      document.querySelector('.js-result').innerHTML = `You chose: ${result}`;
+
+    }
+
+    function tailsBridge() {
+      let right = document.querySelector('.js-button-two');
+      let result = 'tails'
+
+      if(right === 'tails'){
+        result = 'tails';
+      }
+      document.querySelector('.js-result').innerHTML = `You chose: ${result}`;
+       }
+
+       document.querySelector('.js-button').innerHTML = '9B done!';
+     </script>
+  </body>
+</html>

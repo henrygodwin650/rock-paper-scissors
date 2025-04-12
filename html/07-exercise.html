@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function greet(name = 'there!') {
+        console.log(`Hello! ${name}`)
+      }
+     greet ('Simon');
+     greet ();
+
+      function convertToFahrenheit(celsius) {
+        console.log((celsius * 9 / 5) + 32);
+      }  
+    convertToFahrenheit(25);
+
+    function convertToCelsius(fahrenheit) {
+      console.log((fahrenheit - 32) * 5/9);
+    }
+    convertToCelsius(86);
+
+    function convertTemperatureF(degree,unit) {
+      console.log((degree*9/5)+32 + unit);
+    }
+    function convertTemperatureC(degree,unit) {
+      console.log((degree-32)*5/9 + unit)
+    }
+    convertTemperatureF(25,'F');
+    convertTemperatureC(86,'C');
+
+
+    let length = '';
+    let from ='';
+    let to ='';
+
+    function convertLength(length, from, to) {
+         console.log((length * 1.6) + to);
+         console.log((length/1.6) + from);
+         console.log((length /1.6)*1.6 + to)
+    }
+    convertLength(50,'miles','km');
+    convertLength(32,'miles','km')
+    convertLength(50,'km','km')
+
+
+   /*
+   
+   */
+     
+     function convertLength1(length, from, to) {
+       console.log((length * 1.6) + to);
+       console.log((length * 5280) + to);
+       console.log((length * 3281) + to);
+     }
+     convertLength1(5,'miles','km');
+     convertLength1(5,'miles','ft');
+    
+</script>
+  </body>
+</html>
