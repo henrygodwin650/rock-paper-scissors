@@ -29,36 +29,4 @@
  font-family: arial;
 }
 
-.is-toggled{
-background-color: rgb(230, 230, 230);
- color: black;
- border: none;
- border-radius: 5px;
- padding: 12px 30px;
- font-weight: 550;
- font-size: 15px;
- font-family: arial;
- cursor: pointer;
-}
-.is-untoggled{
-background-color: black;
-color: white;
-border: none;
-border-radius: 5px;
-padding: 12px 30px;
-font-weight: 550;
-font-size: 15px;
-cursor: pointer;
-font-family: arial;
-}
-.is-toggled1{
-background-color: rgb(230, 230, 230);
- color: black;
- border: none;
- border-radius: 5px;
- padding: 12px 30px;
- font-weight: 550;
- font-size: 15px;
- font-family: arial;
- cursor: pointer;
-}
+/* button css*/

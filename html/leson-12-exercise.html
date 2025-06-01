@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    Lesson-12-Exercise
+  </title>
+  <body>
+    <script>
+    multiply = (a, b) =>a * b;
+    console.log(multiply(2,3));
+    console.log(multiply(7 , 10));
+
+
+    const  countPositive = (nums) => {
+      let count = 0;
+      nums.forEach(function(num) {
+        if (num > 0){
+          count++
+        }
+      });
+      return count;
+    }
+    console.log(countPositive([1, -3, 5]));
+    console.log(countPositive([-2, 3, -5, 7, 10]));
+
+    function addNum(array,num){
+    return array.map(x => x + num);
+    }
+
+    console.log(addNum([1, 2, 3], 2));
+    console.log(addNum([-2, -1, 0, 99], 2)); 
+
+    const removeEgg = foods => foods.filter(food=>food !== 'egg');
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+    const removeEgg1 = (() =>{
+      let count = 0;
+      return foods => foods.filter(food => food !=='egg' || count++ >= 2);
+    })();
+    console.log(removeEgg1(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+  </body>
+</html>
