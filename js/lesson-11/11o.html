@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercise 11o</title>
+  </head>
+  <body>
+    <script>
+      //11o
+      /*
+      let string = ['hello','word','search','good'];
+      // Set the index to -1 at the start
+      let index = -1;
+      //  (so we'll assume
+      // the string 'search' doesn't exist in the array).
+      // If we find the string 'search' in the array, we
+      // will update the index.
+      for (let i = 0; i <= string.length; i++) {
+         if(string[i] === 'search'){
+          index = i;
+         }
+      }
+      console.log(index);
+
+      string = ['not', 'found'];
+      index = -1;
+      for(let i = 0; i <= string.length; i++) {
+         if(string[i] === 'search'){
+          index = i;
+         }
+      }
+      console.log(index);
+      */
+     //11p
+     /*
+     let string = ['hello','world','search','good','search'];
+      // Set the index to -1 at the start
+      let index = -1;
+      //  (so we'll assume
+      // the string 'search' doesn't exist in the array).
+      // If we find the string 'search' in the array, we
+      // will update the index.
+      for (let i = 0; i <= string.length; i++) {
+         if(string[i] === 'search'){
+          index = i;
+          break;
+         }
+      }
+      console.log(index);
+      */
+      //11q
+    /*
+    function findIndex(array, word){
+      //  (so we'll assume
+      // the string 'search' doesn't exist in the array).
+      // If we find the string 'search' in the array, we
+      // will update the index.
+      for (let i = 0; i < array.length; i++) {
+         if(array[i] === word){
+          return i;
+         }
+      }
+
+      return -1;
+    }
+
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+    */
+    //11r
+    /*
+    function removeEgg(foods){
+      for(let i = 1; i < foods.length; i++) {
+        if (foods[i] % 'eggs' === 0) {
+          continue;
+        }
+        if(!foods[i] % 'eggs' === 0) {
+          break;
+        }
+      }
+      return array;
+    }
+      */
+     //11s
+    /*
+      const removeEgg = foods => foods.filter(food =>food !== 'egg');
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg','ham']));
+
+    function removeEgg(foods) {
+        const result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < foods.length; i++) {
+          // Only skip 'egg' if we removed less than 2
+          // of them so far.
+          if (foods[i] === 'egg' && eggsRemoved < 2) {
+            // Update the number of 'egg' we have removed.
+            // This must be done before continue, otherwise,
+            // doing continue first will just skip this code.
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(foods[i]);
+        }
+
+        return result;
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+*/
+    //11t
+    /*
+    function removeEgg1(foods) {
+      // To remove the last 2 'egg',reverse the array first.
+      const reversedFoods = foods.reverse();
+
+      const result = [];
+      let eggsRemoved = 0;
+
+      for(let i = 0; i < reversedFoods.length; i++) {
+        if (reversedFoods[i] === 'egg' && eggsRemoved < 2){
+          eggsRemoved++;
+          continue;
+        }
+
+        result.push(reversedFoods[i]);
+      }
+
+      //At the end, remember to .reverse() back the result.
+      return result.reverse();
+  }
+     console.log(removeEgg1(['egg', 'apple', 'egg', 'egg', 'ham']));
+     */
+
+    //11v
+     function removeEgg(foods) {
+        // To prevent modifying the original array, we
+        // can create a copy of the array using .slice()
+        const foodsCopy = foods.slice() .reverse();
+
+        // Advanced technique:
+        // Since foods.slice() results in an array, we
+        // can also use .reverse() directly like this:
+        // foods.slice().reverse();
+        
+        // This technique is called "method chaining"
+        // because we use one method after another
+        // (like a chain of methods).
+        const result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < foodsCopy.length; i++) {
+          if (foodsCopy[i] === 'egg' && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(foodsCopy[i]);
+        }
+
+        return result.reverse();
+      }
+
+      const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+      console.log(removeEgg(foods));
+      console.log(foods);
+    </script>
+  </body>
+</html>

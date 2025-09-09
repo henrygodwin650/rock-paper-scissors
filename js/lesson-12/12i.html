@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12I</title>
+  </head>
+  <body>
+    <button onclick="
+      isNewMessage++;
+      ">Add</button>
+      <button onclick="
+       isNewMessage--;
+      ">Remove</button>
+    <script>
+    let originalTitle = document.title;
+      let isNewMessage = 2;
+
+      setInterval(function (){
+        function message(){
+        if (document.title === 'App') {
+          document.title = `(${isNewMessage}) New message`;
+        } else {
+          document.title = 'App';
+        }
+      }
+        
+        if (!isNewMessage === 0) {
+          document.title = 'App';
+        } else if (isNewMessage > 0){
+          return message();
+        }
+      }, 1000);
+      </script>
+  </body>
+</html></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12G</title>
+  </head>
+  <body>
+    <button onclick="
+      isNewMessage++;
+      ">Add</button>
+      <button onclick="
+       isNewMessage--;
+      ">Remove</button>
+    <script>
+    let originalTitle = document.title;
+      let isNewMessage = 2;
+
+      setInterval(function (){
+        if (document.title === 'App') {
+          document.title = `(${isNewMessage}) New message`;
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+      </script>
+  </body>
+</html>

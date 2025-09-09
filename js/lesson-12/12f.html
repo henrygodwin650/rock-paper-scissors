@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12e</title>
+  </head>
+  <body>
+    <button onclick="
+     
+      ">Add to cart</button>
+    <p class="js-cart-message"></p>
+
+    <script>
+      let timeoutId;
+
+      function displayMessage (){
+        const cart = document.querySelector('.js-cart-message');
+        cart.innerHTML = 'Added';
+
+        clearInterval(timeoutId);
+
+        timeoutId = setInterval(function() {
+          cart.innerHTML ='';
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

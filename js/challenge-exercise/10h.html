@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/TExTS FOR JS/Styles/10h.css">
+  </head>
+  <body>
+   <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+      handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    " class="calculate">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <!-- Create an element to display the error message. -->
+    <p class="js-error-message error"></p>
+
+    <script src="/TExTS FOR JS/Scripts/10h.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+/*
+      function greet(name){
+        if (!name) {
+          console.log('Hi there')
+        } else{
+          console.log(`Hello! ${name}`);
+        }
+      }
+      greet('easylearning.dev');
+      greet('michael');
+      greet();
+
+      function convertToCelsius (fahrenheit) {
+        console.log((fahrenheit - 32) * 5 / 9);
+      }
+      convertToCelsius(86);
+
+      function convertToFahrenheit (celsius) {
+        console.log((celsius  * 9 / 5) + 32);
+      }
+      convertToFahrenheit(25);
+
+      function convertTemperature (degrees , unit) {
+        console.log((degrees - 32) * 5 / 9 + unit);        console.log((degrees * 9 / 5) + 32 + unit);
+      }
+      convertTemperature(86, 'C');
+      convertTemperature(25, 'F')
+      */
+
+      /*
+      function convertLength (length, from, to){
+        console.log((length * 1.6) + to);
+      } 
+      convertLength(50, 'miles', 'km');
+      */
+      /*
+       function convertLength (length, from, to){
+        console.log((length / 1.6) + to);
+      }
+      convertLength(32,'km', 'miles');
+       */
+       /*
+      function convertLength (length, from, to){
+        console.log((length) + to);
+      } 
+      convertLength(50, 'km', 'km');
+      */
+/*
+      function convertLength1 (length, from, to) {
+        console.log((length * 1.6) + to);
+      }
+      convertLength1(5, 'miles', 'km');
+*/
+/*
+      function convertLength1 (length, from, to) {
+        console.log((length * 5280) + to);
+      }
+      convertLength1(5, 'miles', 'ft');
+      */
+/*
+      function convertLength1 (length, from, to) {
+        console.log((length * 3281) + to);
+      }
+      convertLength1(5, 'km', 'ft');
+      */
+     
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function convertLength(length, from, to) {
+        // I like to put invalid checks at the top since it's a bit
+        // easier to see. Also, if something is invalid, we can skip
+        // the rest of the function.
+        if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+          return `Invalid unit: ${from}`;
+        } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+          return `Invalid unit: ${to}`;
+        }
+        
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} ${to}`;
+
+        } else if (from === 'km' && to === 'ft') {
+          return `${length * 3281} ${to}`;
+          
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} ${to}`;
+
+        } else if (from === 'miles' && to === 'ft') {
+          return `${length * 5280} ${to}`;
+
+        } else if (from === 'ft' && to === 'km') {
+          return `${length / 3281} ${to}`;
+
+        } else if (from === 'ft' && to === 'miles') {
+          return `${length / 5280} ${to}`;
+
+        // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+
+      console.log(convertLength(5, 'miles', 'km'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
+
+      console.log(convertLength(5, 'lbs', 'lbs'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    button{
+      font-size: 18px;
+      font-weight: bold;
+      font-family: Arial;
+      padding: 8px 8px   ;
+    }
+  </style>
+  </head>
+  <body>
+    <p class="js-screen"></p>
+    <p>
+    <button onclick="
+      updateCalculator('1');
+      ">
+      <b>1</b>
+    </button>
+    <button onclick="
+      updateCalculator('2');
+    ">
+      <b>2</b>
+    </button>
+    
+    <button onclick="
+      updateCalculator('3');
+    ">
+      <b>3</b>
+    </button>
+    <button onclick="
+      updateCalculator(' + ');
+    ">
+      <b>+</b>
+    </button>
+    </p>
+    <p>
+    <button onclick="
+      updateCalculator('4');
+      ">
+      <b>4</b>
+    </button>
+    <button onclick="
+      updateCalculator('5');
+    ">
+      <b>5</b>
+    </button>
+    
+    <button onclick="
+      updateCalculator('6');
+    ">
+      <b>6</b>
+    </button>
+    <button onclick="
+      updateCalculator(' - ');
+    ">
+      <b>-</b>
+    </button>
+    </p>
+    <p>
+    <button onclick="
+      updateCalculator('7');
+      ">
+      <b>7</b>
+    </button>
+    <button onclick="
+      updateCalculator('8');
+    ">
+      <b>8</b>
+    </button>
+    
+    <button onclick="
+      updateCalculator('9');
+    ">
+      <b>9</b>
+    </button>
+    <button onclick="
+      updateCalculator(' * ');
+    ">
+      <b>*</b>
+    </button>
+    </p>
+    <p>
+    <button onclick="
+      updateCalculator('0');
+      ">
+      <b>0</b>
+    </button>
+    <button onclick="
+      updateCalculator('.');
+    ">
+      <b>.</b>
+    </button>
+    
+    <button onclick="
+      calculation = eval(calculation);
+      calculatorScreen();
+
+      localStorage.setItem('calculation', calculation);
+    ">
+      <b>=</b>
+    </button>
+    <button onclick="
+      updateCalculator(' / ');
+    ">
+      <b>/</b>
+    </button>
+    </p>
+    <button onclick="
+    updateCalculator('');
+
+    localStorage.setItem('calculation', calculation);
+    ">
+      Clear
+    </button>
+    
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      calculatorScreen();
+
+      function updateCalculator(value){
+        calculation += value;
+
+      calculatorScreen();
+
+      localStorage.setItem('calculation', calculation);
+      }
+
+      function calculatorScreen(){
+        document.querySelector('.js-screen').innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>

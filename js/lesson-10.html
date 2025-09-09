@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML, CSSS and JAVASCRIPT together</title>
+    <link rel="stylesheet" href="Styles/lesson-10.css">
+  </head>
+  <body>
+    <button class="add-button">
+      Add to Cart
+    </button>
+    <p>
+      <button class="request">
+        Request now
+      </button>
+      <button class="schedule">
+        Schedule for later
+      </button>
+    </p>
+    <button onclick="
+     butTon();
+    " class="js-button">
+      No 
+    </button>
+
+    <p></p>
+
+    <button class="game-button js-game" onclick="
+      const click = document.querySelector('.js-game');
+     
+      if(!click.classList.contains('is-toggled')){
+       click.classList.add('is-toggled');
+      } else {
+       classList.remove('is-toggled');
+      };
+    ">
+      Gaming
+    </button>
+
+    <p>
+      <button class="game-button js-gaming" onclick="
+          gameButton();
+        ">Gaming</button>
+      <button class="game-button js-music" onclick="
+          musicButton();
+        ">
+        Music
+      </button>
+
+      <button class="game-button js-tech" onclick="
+        techButton(); 
+       ">
+       Tech
+      </button>
+    </p>
+    <script src="Scripts/lesson-10.js"></script>
+  </body>
+</html>
