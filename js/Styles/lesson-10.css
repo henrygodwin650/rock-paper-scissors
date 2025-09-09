@@ -1,0 +1,44 @@
+body{
+  font-family: Arial;
+}
+.add-button{
+  background-color: rgb(255, 223, 62);
+  color: black;
+  font-size: 18px;
+  border-radius: 18px;
+  border: none;
+  padding: 8px 45px;
+}
+.request{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 15px;
+}
+.schedule{
+  background-color: rgb(230, 228, 228);
+  color: black;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 15px;
+  margin-left: 20px;
+}
+.game-button{
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+.is-toggled{
+  background-color: rgb(230, 228, 228);
+  color: black;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+}

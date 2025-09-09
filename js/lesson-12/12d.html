@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12D</title>
+  </head>
+  <body>
+    <button class="js-click-button" onclick="
+      buttonOnClick();
+      ">
+      Start
+    </button>
+    <script>
+      function buttonOnClick (){
+       let button = document.querySelector('.js-click-button'); 
+        button.innerHTML = 'Loading...';
+       setTimeout(function (){
+          button.innerHTML = 'Finished!.'
+        }, 1000)
+      }
+    </script>
+  </body>
+</html>

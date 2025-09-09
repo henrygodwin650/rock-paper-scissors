@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function findIndex(array, word){
+      //  (so we'll assume
+      // the string 'search' doesn't exist in the array).
+      // If we find the string 'search' in the array, we
+      // will update the index.
+      for (let i = 0; i < array.length; i++) {
+         if(array[i] === word){
+          return i;
+         }
+      }
+
+      return -1;
+    }
+
+    function unique (array){
+      const result = [];
+
+      for (let i = 0; i < array.length; i++) {
+        const word = array[i];
+          if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+      return result;
+    }
+
+     console.log(unique(['green', 'red','blue', 'red']));
+      console.log(unique(['red', 'green', 'green','red'])); 
+    </script>
+  </body>
+</html>

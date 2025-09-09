@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12e</title>
+  </head>
+  <body>
+    <button onclick="
+     const cart = document.querySelector('.js-cart-message');
+     cart.innerHTML = 'Added'
+     setInterval(function() {
+      cart.innerHTML ='';
+     }, 2000)
+      ">Add to cart</button>
+    <p class="js-cart-message"></p>
+  </body>
+</html>

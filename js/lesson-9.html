@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!--
+    <button class="js-button">9a</button>
+    <button class="js-second-button">9b</button>
+    <p></p>
+
+    <button class="js-heads" onclick="
+     document.querySelector('.js-click-result').innerHTML ='You chose: heads';
+    ">heads</button>
+    <button class="js-tails" onclick="
+      document.querySelector('.js-click-result').innerHTML ='You chose: tails';
+    ">tails</button>
+    <p class="js-click-result"></p>
+  -->
+
+    <input class="js-name-input" onkeydown="
+      handleKeydown(event);
+    " placeholder="Name">
+    <button onclick="
+     checkName();
+    ">Submit</button>
+    <p class="js-show-name"></p>
+    <script>
+      function handleKeydown (event){
+        if (event.key === 'Enter') {
+          checkName();
+        }
+      }
+      function checkName (){
+        const nameInput = document.querySelector('.js-name-input');
+        let nameLink = nameInput.value;
+      
+        document.querySelector('.js-show-name').innerHTML = `My name is: ${nameLink}`;
+      }
+
+      /*
+     const buttonElement = document.querySelector('.js-button').innerHTML;
+     console.log(buttonElement);
+
+     const buttonElement1 = document.querySelector('.js-second-button').innerHTML ='9b Done!';
+     console.log(buttonElement1);
+     */
+    </script>
+  </body>
+</html>

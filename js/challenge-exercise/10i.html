@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/TExTS FOR JS/Styles/10i.css">
+  </head>
+  <body>
+    <p class="js-screen screen"></p>
+    <p>
+    <button class="button-number" onclick="
+      updateCalculator('1');
+      ">
+      <b>1</b>
+    </button>
+    <button class="button-number" onclick="
+      updateCalculator('2');
+    ">
+      <b>2</b>
+    </button>
+    
+    <button class="button-number" onclick="
+      updateCalculator('3');
+    ">
+      <b>3</b>
+    </button>
+    <button class="button-symbol" onclick="
+      updateCalculator(' + ');
+    ">
+      <b>+</b>
+    </button>
+    </p>
+    <p>
+    <button class="button-number" onclick="
+      updateCalculator('4');
+      ">
+      <b>4</b>
+    </button>
+    <button class="button-number" onclick="
+      updateCalculator('5');
+    ">
+      <b>5</b>
+    </button>
+    
+    <button class="button-number" onclick="
+      updateCalculator('6');
+    ">
+      <b>6</b>
+    </button>
+    <button class="button-symbol" onclick="
+      updateCalculator(' - ');
+    ">
+      <b>-</b>
+    </button>
+    </p>
+    <p>
+    <button class="button-number" onclick="
+      updateCalculator('7');
+      ">
+      <b>7</b>
+    </button>
+    <button class="button-number" onclick="
+      updateCalculator('8');
+    ">
+      <b>8</b>
+    </button>
+    
+    <button class="button-number" onclick="
+      updateCalculator('9');
+    ">
+      <b>9</b>
+    </button>
+    <button class="button-symbol" onclick="
+      updateCalculator(' * ');
+    ">
+      <b>*</b>
+    </button>
+    </p>
+    <p>
+    <button class="button-number" onclick="
+      updateCalculator('0');
+      ">
+      <b>0</b>
+    </button>
+    <button class="button-number" onclick="
+      updateCalculator('.');
+    ">
+      <b>.</b>
+    </button>
+    
+    <button class="button-number" onclick="
+      calculation = eval(calculation);
+      calculatorScreen();
+
+      localStorage.setItem('calculation', calculation);
+    ">
+      <b>=</b>
+    </button>
+    <button class="button-symbol" onclick="
+      updateCalculator(' / ');
+    ">
+      <b>/</b>
+    </button>
+    </p>
+    <button class="button-clear" onclick="
+        calculation = '';
+
+        // Display the calculation on the page
+        // instead of console.log
+        calculatorScreen();
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    
+    <script src="/TExTS FOR JS/Scripts/10i.js">
+    </script>
+  </body>
+</html>
